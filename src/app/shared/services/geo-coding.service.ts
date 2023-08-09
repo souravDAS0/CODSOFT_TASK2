@@ -15,7 +15,7 @@ export class GeoCodingService implements OnInit {
 
   getLocation(location: string): Observable<GeoCodingData[]> {
     return this.http.get<GeoCodingData[]>(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${location},{country_code}&limit=3&appid=${environment.API_KEY}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${location},{country_code}&limit=3&appid=${environment.API_KEY}`
     );
   }
 }
