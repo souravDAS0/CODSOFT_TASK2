@@ -1,0 +1,22 @@
+<div class="details">
+    <div class="container">
+        <div class="left">
+            <div class="weather">
+                <h2 *ngIf="weatherData.weather[0].main">{{weatherData.weather[0].main}}</h2>
+                <h5 *ngIf="weatherData.weather[0].description">Description <span>- {{weatherData.weather[0].description
+                        | titlecase}}</span></h5>
+            </div>
+            <div class="maxmin">
+                <h4>Minimum Temperature <span>- {{weatherData.main.temp_min | number :
+                        '1.1-1'}}
+                        °C</span></h4>
+                <h4>Maximum Temperature <span>- {{weatherData.main.temp_max | number :
+                        '1.1-1'}}
+                        °C</span></h4>
+            </div>
+        </div>
+        <div class="right">
+            <img src="https://openweathermap.org/img/wn/{{weatherData.weather[0].icon}}@4x.png" alt="">
+        </div>
+    </div>
+</div>

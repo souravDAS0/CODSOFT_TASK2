@@ -1,0 +1,65 @@
+.header {
+    // background-color: #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // padding: 16px;
+
+    .name {
+        padding: 32px;
+
+        h1 {
+            color: #2E2E2E;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            margin: 0;
+        }
+    }
+
+    .search {
+        margin: 8px 32px;
+
+        .searchbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #2e2e2e;
+            // padding: 8px;
+            border-radius: 8px;
+            background-color: #ffffff;
+
+            input {
+                padding: 8px;
+                margin: 0 8px;
+                border: none;
+                color: #B89494;
+                font-family: Montserrat;
+
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                text-align: center;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                border-radius: 0 8px 8px 0;
+                padding: 8px;
+                border: none;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: #dcdcdc;
+                }
+
+                &:active {
+                    background-color: #a5a5a5;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<div class="main">
+    <div class="place">
+        <h2>{{geocodingData[0].name}}</h2>
+        <h4 *ngIf="geocodingData[0].state && weatherData.sys.country">{{geocodingData[0].state | titlecase}} ,
+            {{weatherData.sys.country}}</h4>
+    </div>
+    <div class="temp">
+        <h3>{{weatherData.main.temp | number : '1.1-1'}} °C</h3>
+        <h5>Feels like {{weatherData.main.feels_like | number : '1.1-1'}} °C</h5>
+    </div>
+</div>

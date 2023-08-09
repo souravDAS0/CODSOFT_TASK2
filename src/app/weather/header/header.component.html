@@ -1,0 +1,18 @@
+<div class="header">
+    <div class="name">
+        <h1>{{ title }}</h1>
+    </div>
+    <div class="search">
+        <form (ngSubmit)="submit(search.value)" class="searchbox">
+            <input #search type="text" name="search" id="search" placeholder="Enter Place or City">
+            <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <path d="M26.6665 26.6667L18.6665 18.6667" stroke="black" stroke-width="2" stroke-linecap="round" />
+                    <path
+                        d="M19.9999 12.6667C19.9999 14.6116 19.2273 16.4768 17.852 17.8521C16.4768 19.2274 14.6115 20 12.6666 20C10.7217 20 8.8564 19.2274 7.48114 17.8521C6.10587 16.4768 5.33325 14.6116 5.33325 12.6667C5.33325 10.7217 6.10587 8.85648 7.48114 7.48122C8.8564 6.10595 10.7217 5.33333 12.6666 5.33333C14.6115 5.33333 16.4768 6.10595 17.852 7.48122C19.2273 8.85648 19.9999 10.7217 19.9999 12.6667Z"
+                        stroke="black" stroke-width="2" />
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>

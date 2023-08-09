@@ -1,0 +1,11 @@
+<app-header [title]="title" (search)="getLatLon($event)"></app-header>
+<!-- (current)="getCurrent()" -->
+
+<div class="full" *ngIf="weatherData">
+    <div class="weather">
+        <app-main [weatherData]="weatherData" [geocodingData]="geocodingData"></app-main>
+
+        <app-details [weatherData]="weatherData"></app-details>
+    </div>
+    <app-extras [weatherData]="weatherData"></app-extras>
+</div>
