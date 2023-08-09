@@ -18,3 +18,19 @@
     }
 
 }
+
+@media only screen and (max-width: 700px) {
+    .full {
+        .weather {
+            flex-direction: column;
+
+            app-main {
+                width: 100%;
+            }
+
+            app-details {
+                width: 100%;
+            }
+        }
+    }
+}
