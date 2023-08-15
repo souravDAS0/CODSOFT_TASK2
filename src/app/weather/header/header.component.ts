@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -6,11 +7,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  location: string = '';
+
   @Input() title!: string;
 
   @Output() search = new EventEmitter<string>();
 
-  submit(location: string) {
-    this.search.emit(location);
+  submit(locationData: NgForm) {
+    this.search.emit(this.location);
+    locationData.reset();
   }
 }

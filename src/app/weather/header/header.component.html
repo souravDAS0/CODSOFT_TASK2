@@ -3,8 +3,8 @@
         <h1>{{ title }}</h1>
     </div>
     <div class="search">
-        <form (ngSubmit)="submit(search.value)" class="searchbox">
-            <input #search type="text" name="search" id="search" placeholder="Enter Place or City">
+        <form #locationData="ngForm" (ngSubmit)="submit(locationData)" class="searchbox">
+            <input type="text" name="search" id="search" placeholder="Enter Place or City" [(ngModel)]="location">
             <button type="submit">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
                     <path d="M26.6665 26.6667L18.6665 18.6667" stroke="black" stroke-width="2" stroke-linecap="round" />
