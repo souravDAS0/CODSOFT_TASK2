@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { WeatherData } from 'src/app/shared/models/weatherData.interface';
 
 @Component({
@@ -6,6 +6,11 @@ import { WeatherData } from 'src/app/shared/models/weatherData.interface';
   templateUrl: './extras.component.html',
   styleUrls: ['./extras.component.scss'],
 })
-export class ExtrasComponent {
+export class ExtrasComponent implements OnChanges {
   @Input() weatherData!: WeatherData;
+  pressure!: number;
+
+  ngOnChanges() {
+    this.pressure = Math.round(this.weatherData?.main?.pressure * 0.75);
+  }
 }

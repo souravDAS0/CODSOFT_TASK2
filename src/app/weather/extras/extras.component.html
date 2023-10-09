@@ -2,12 +2,13 @@
     <div class="container">
         <div class="card">
             <h4 *ngIf="weatherData.main.humidity">Humidity <span>- {{weatherData.main.humidity}}%</span></h4>
-            <h4 *ngIf="weatherData.main.pressure">Atmospheric pressure <span>- {{weatherData.main.pressure}} hPa</span>
+            <h4 *ngIf="weatherData.main.pressure">Atmospheric pressure <span>- {{pressure}}
+                    mmHg</span>
             </h4>
 
         </div>
         <div class="card">
-            <h4 *ngIf="weatherData.wind.speed">Wind speed <span>- {{weatherData.wind.speed}} meter/sec</span></h4>
+            <h4 *ngIf="weatherData.wind.speed">Wind speed <span>- {{weatherData.wind.speed}} m/s</span></h4>
             <h4 *ngIf="weatherData.wind.deg">Wind direction <span>- {{weatherData.wind.deg}} °</span></h4>
         </div>
         <div class="card">
