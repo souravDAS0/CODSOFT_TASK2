@@ -48,34 +48,4 @@ export class WeatherComponent implements OnInit {
       console.log(this.weatherData);
     });
   }
-
-  // getCurrent() {
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(
-  //       (position: GeolocationPosition) => {
-  //         if (position) {
-  //           console.log(
-  //             'Latitude: ' +
-  //               position.coords.latitude +
-  //               ' Longitude: ' +
-  //               position.coords.longitude
-  //           );
-  //           this.coords = {
-  //             Lat: position.coords.latitude,
-  //             Lon: position.coords.longitude,
-  //           };
-  //         }
-  //       },
-  //       (error: GeolocationPositionError) => console.log(error),
-  //       {
-  //         enableHighAccuracy: true,
-  //         timeout: 5000,
-  //         maximumAge: 10000,
-  //       }
-  //     );
-  //   } else {
-  //     alert('Geolocation is not supported by this browser.');
-  //   }
-  //   this.getData(this.coords);
-  // }
 }
